@@ -53,7 +53,7 @@ h1, h2, h3, h4 {
   color: #d0d0d0; }
 
 h1 {
-  font-size: 3.6em;
+  font-size: 3em;
   font-weight: 300;
   color: #8b8ea7; }
 
@@ -72,13 +72,9 @@ p {
   color: #d0d0d0; }
 
 a {
-  text-decoration: none;
   color: white;
-  font-size: 1.1rem;
-  font-weight: 600; }
-
-a:hover {
-  text-decoration: underline; }
+  font-size: 1rem;
+  font-weight: 200; }
 
 small {
   font-size: 0.707em; }
@@ -118,6 +114,60 @@ nav a {
 .built a:hover {
   text-decoration: underline; }
 
+.btn {
+  border: none;
+  background: none;
+  margin: 6px;
+  color: #d0d0d0;
+  font-size: 2rem;
+  border-radius: 1px;
+  padding: 0.3em 4.5em;
+  transition: all 0.2s ease; }
+
+.btn-outline {
+  color: #d80060;
+  border: 2px solid #d80060;
+  padding: 0.52em 1.1em; }
+  .btn-outline:hover {
+    background-color: #d80060;
+    color: #d0d0d0; }
+
+.btn-round {
+  border-radius: 50px; }
+
+.btn-sm {
+  font-size: 0.707em; }
+
+.bg-brand {
+  background-color: #d80060; }
+  .bg-brand:hover {
+    background-color: #bf0055; }
+  .bg-brand:active {
+    background-color: #a50049;
+    color: #b7b6b6; }
+
+.bg-alt {
+  background-color: #862bab; }
+  .bg-alt:hover {
+    background-color: #762697; }
+
+/*=============================================
+=                 MEDIA QUERIES               =
+=============================================*/
+/* -- BREAK 1 -- */
+@media all and (max-width: 500px) {
+  html {
+    font-size: 12px;
+    line-height: 1.4; }
+  main {
+    width: 360px;
+    margin: 0 auto; }
+  #myCanvas {
+    margin: 10px auto; }
+  canvas {
+    width: 260;
+    height: 260; } }
+
 html {
   height: 100%; }
 
@@ -125,16 +175,19 @@ body {
   background: #1a1b25; }
 
 #myCanvas {
-  margin: 100px auto; }
+  margin: 80px auto; }
 
 #counter {
   position: absolute;
   left: 50%;
-  top: 385px;
+  top: 345px;
   transform: translate(-50%, -50%); }
 
 main {
-  width: 605px;
-  height: 405px;
+  width: 420px;
   margin: 70px auto 0;
-  text-align: center; }
+  text-align: center;
+  padding: 0 30px; }
+
+button {
+  background: #d80060; }

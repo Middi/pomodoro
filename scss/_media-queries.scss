@@ -1,0 +1,31 @@
+/*=============================================
+=                 MEDIA QUERIES               =
+=============================================*/
+
+
+
+/* -- BREAK 1 -- */
+
+@media all and (max-width: 500px) {
+  html {
+    font-size: 12px;
+    line-height: 1.4;
+  }
+
+  main {
+    width: 360px;
+    margin: 0 auto;
+}
+
+
+#myCanvas {
+    margin: 10px auto;
+    // border: red 2px solid;
+}
+
+canvas{
+
+    width: 260;
+    height: 260;
+}
+}

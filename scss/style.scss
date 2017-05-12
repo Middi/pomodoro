@@ -1,6 +1,8 @@
 @import "normalise";
 @import "colors";
 @import "typography";
+@import "buttons";
+@import "media-queries";
 
 
 html {
@@ -12,21 +14,25 @@ body {
 }
 
 #myCanvas {
-    margin: 100px auto;
+    margin: 80px auto;
     // border: red 2px solid;
 }
 
 #counter { 
   position: absolute;
   left: 50%;
-  top: 385px;
+  top: 345px;
   transform: translate(-50%, -50%);
 }
 
 main {
-    width: 605px;
-    height: 405px;
+    width: 420px;
     margin: 70px auto 0;
     text-align: center;
     // border: green solid 2px;
+    padding: 0 30px;
+}
+
+button {
+    background: $brand;
 }
