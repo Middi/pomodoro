@@ -124,32 +124,13 @@ nav a {
   padding: 0.3em 4.5em;
   transition: all 0.3s ease; }
 
-.btn-outline {
-  color: #d80060;
-  border: 2px solid #d80060;
-  padding: 0.52em 1.1em; }
-  .btn-outline:hover {
-    background-color: #d80060;
-    color: #d0d0d0; }
-
-.btn-round {
-  border-radius: 50px; }
-
-.btn-sm {
-  font-size: 0.707em; }
-
 .bg-brand {
-  background: linear-gradient(180deg, #d80060, #d80060 70%, #dc0095 90%); }
+  background: linear-gradient(180deg, #d80060, #d80060 80%, #dc0095 98%); }
   .bg-brand:hover {
-    background: linear-gradient(180deg, #ce005b, #ce005b 70%, #d2008e 90%); }
+    background: linear-gradient(180deg, #ce005b, #ce005b 80%, #d2008e 98%); }
   .bg-brand:active {
-    background: linear-gradient(180deg, #c40057, #c40057 70%, #c80087 90%);
+    background: linear-gradient(180deg, #c40057, #c40057 70%, #c80087 98%);
     color: #cbcbcb; }
-
-.bg-alt {
-  background-color: #862bab; }
-  .bg-alt:hover {
-    background-color: #762697; }
 
 /*=============================================
 =                 MEDIA QUERIES               =

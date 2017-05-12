@@ -19,40 +19,18 @@
 }
 
 
-.btn-outline {
-	color: $brand;
-	border: 2px solid $outline;
-	padding: 0.52em 1.1em;
-	
-	&:hover {
-	background-color: $brand;
-    color: $white;
-	}
-}
-
-.btn-round {border-radius: 50px}
-
-.btn-sm {font-size: 0.707em}
-
-
 //--------------------------------
 // Background Colors
 //--------------------------------
 
 .bg-brand {
     
-    background: linear-gradient( 180deg, $brand, $brand 70%, $alt 90%);
+    background: linear-gradient( 180deg, $brand, $brand 80%, $alt 98%);
 
-    &:hover {background: linear-gradient( 180deg, darken($brand, 2), darken($brand, 2) 70%, darken($alt,2) 90%);}
+    &:hover {background: linear-gradient( 180deg, darken($brand, 2), darken($brand, 2) 80%, darken($alt,2) 98%);}
 
     &:active {
-        background: linear-gradient( 180deg, darken($brand, 4), darken($brand, 4) 70%, darken($alt,4) 90%);
+        background: linear-gradient( 180deg, darken($brand, 4), darken($brand, 4) 70%, darken($alt,4) 98%);
         color: darken($text, 2);
         }
-}
-
-.bg-alt {
-    background-color: $purple500;
-
-    &:hover {background-color: darken($purple500, 5)}
 }
