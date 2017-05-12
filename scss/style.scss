@@ -12,23 +12,21 @@ body {
 }
 
 #myCanvas {
+    margin: 100px auto;
     // border: red 2px solid;
 }
 
 #counter { 
   position: absolute;
   left: 50%;
-  top: 50%;
+  top: 385px;
   transform: translate(-50%, -50%);
-  width: 200px;
-  height: 90px;
-  border: 2px solid white;
-  text-align: center;
 }
 
 main {
-    width: 405px;
+    width: 605px;
     height: 405px;
-    margin: 0 auto;
+    margin: 70px auto 0;
+    text-align: center;
     // border: green solid 2px;
 }

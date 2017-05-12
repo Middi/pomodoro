@@ -41,22 +41,100 @@ input, select {
   appearance: none; }
 
 html {
+  font-size: 14px; }
+
+body {
+  font-family: 'Open Sans';
+  line-height: 1.2; }
+
+h1, h2, h3, h4 {
+  font-family: 'Open Sans';
+  font-weight: 700;
+  color: #d0d0d0; }
+
+h1 {
+  font-size: 3.6em;
+  font-weight: 300;
+  color: #8b8ea7; }
+
+h2 {
+  font-size: 2.827em;
+  margin-top: 8px; }
+
+h3 {
+  font-size: 4em;
+  font-weight: 400; }
+
+h4 {
+  font-size: 1.414em; }
+
+p {
+  color: #d0d0d0; }
+
+a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.1rem;
+  font-weight: 600; }
+
+a:hover {
+  text-decoration: underline; }
+
+small {
+  font-size: 0.707em; }
+
+strong {
+  font-weight: 700; }
+
+em {
+  font-style: italic; }
+
+.fa-heart {
+  font-size: 12px;
+  color: #fc2d23; }
+
+.large {
+  font-size: 40px; }
+
+nav a {
+  font-size: 1.8rem;
+  color: white;
+  font-weight: 300; }
+  nav a:hover {
+    color: white; }
+
+.built {
+  color: white;
+  font-size: 0.9em;
+  padding: 4px;
+  font-weight: 300; }
+  .built strong {
+    font-weight: 400; }
+
+.built a, .built p {
+  font-size: 0.8rem;
+  transition: all 0.6s ease; }
+
+.built a:hover {
+  text-decoration: underline; }
+
+html {
   height: 100%; }
 
 body {
-  background: #24232b; }
+  background: #1a1b25; }
+
+#myCanvas {
+  margin: 100px auto; }
 
 #counter {
   position: absolute;
   left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  width: 200px;
-  height: 90px;
-  border: 2px solid white;
-  text-align: center; }
+  top: 385px;
+  transform: translate(-50%, -50%); }
 
 main {
-  width: 405px;
+  width: 605px;
   height: 405px;
-  margin: 0 auto; }
+  margin: 70px auto 0;
+  text-align: center; }
