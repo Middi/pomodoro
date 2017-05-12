@@ -4,7 +4,7 @@ var mainContext = mainCanvas.getContext("2d");
 function draw() {
 
     mainContext.beginPath();
-    mainContext.arc(150, 150, 140, 0*Math.PI, 2 * Math.PI, false);
+    mainContext.arc(150, 150, 100, 0*Math.PI, 2 * Math.PI, false);
  
     // draw the stroke
     mainContext.lineWidth = 15;
@@ -13,7 +13,7 @@ function draw() {
 
 
     mainContext.beginPath();
-    mainContext.arc(150, 150, 140, 1.5*Math.PI, 1 * Math.PI, false);
+    mainContext.arc(150, 150, 100, 1.5*Math.PI, 1 * Math.PI, false);
  
     // draw the stroke
     mainContext.lineWidth = 15;
