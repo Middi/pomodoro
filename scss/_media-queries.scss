@@ -25,8 +25,14 @@ main {
     transform: translate(-50%, -50%);
 }
 
-button {
-    margin-top: 420px;
+
+.btn {
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2.2rem;
+	padding: 0.5em 4.5em;
 }
 
 
