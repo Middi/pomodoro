@@ -2,7 +2,6 @@
 @import "colors";
 @import "typography";
 @import "buttons";
-@import "media-queries";
 html {
     height: 100%;
 }
@@ -35,3 +34,6 @@ main {
 button {
     background: $brand;
 }
+
+
+@import "media-queries";

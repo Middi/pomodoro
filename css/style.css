@@ -132,23 +132,6 @@ nav a {
     background: linear-gradient(180deg, #c40057, #c40057 70%, #c80087 98%);
     color: #cbcbcb; }
 
-/*=============================================
-=                 MEDIA QUERIES               =
-=============================================*/
-/* -- BREAK 1 -- */
-@media all and (max-width: 500px) {
-  html {
-    font-size: 12px;
-    line-height: 1.4; }
-  main {
-    width: 360px;
-    margin: 0 auto; }
-  #myCanvas {
-    margin: 10px auto; }
-  canvas {
-    width: 260;
-    height: 260; } }
-
 html {
   height: 100%; }
 
@@ -174,3 +157,22 @@ main {
 
 button {
   background: #d80060; }
+
+/*=============================================
+=                 MEDIA QUERIES               =
+=============================================*/
+/* -- BREAK 1 -- */
+@media all and (max-width: 500px) {
+  html {
+    font-size: 10px; }
+  main {
+    width: 300px;
+    margin: 40px auto 0;
+    padding: 0 10px; }
+  #counter {
+    position: absolute;
+    left: 50%;
+    top: 278px;
+    transform: translate(-50%, -50%); }
+  button {
+    margin-top: 420px; } }
