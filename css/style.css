@@ -122,7 +122,7 @@ nav a {
   font-size: 2rem;
   border-radius: 1px;
   padding: 0.3em 4.5em;
-  transition: all 0.2s ease; }
+  transition: all 0.3s ease; }
 
 .btn-outline {
   color: #d80060;
@@ -139,12 +139,12 @@ nav a {
   font-size: 0.707em; }
 
 .bg-brand {
-  background-color: #d80060; }
+  background: linear-gradient(180deg, #d80060, #d80060 70%, #dc0095 90%); }
   .bg-brand:hover {
-    background-color: #bf0055; }
+    background: linear-gradient(180deg, #ce005b, #ce005b 70%, #d2008e 90%); }
   .bg-brand:active {
-    background-color: #a50049;
-    color: #b7b6b6; }
+    background: linear-gradient(180deg, #c40057, #c40057 70%, #c80087 90%);
+    color: #cbcbcb; }
 
 .bg-alt {
   background-color: #862bab; }

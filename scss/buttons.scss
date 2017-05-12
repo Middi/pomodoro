@@ -15,7 +15,7 @@
     font-size: 2rem;
 	border-radius: 1px;
 	padding: 0.3em 4.5em;
-	transition: all 0.2s ease;
+	transition: all 0.3s ease;
 }
 
 
@@ -40,13 +40,14 @@
 //--------------------------------
 
 .bg-brand {
-    background-color: $brand;
+    
+    background: linear-gradient( 180deg, $brand, $brand 70%, $alt 90%);
 
-    &:hover {background-color: darken($brand, 5)}
+    &:hover {background: linear-gradient( 180deg, darken($brand, 2), darken($brand, 2) 70%, darken($alt,2) 90%);}
 
     &:active {
-        background-color: darken($brand, 10);
-        color: darken($text, 10);
+        background: linear-gradient( 180deg, darken($brand, 4), darken($brand, 4) 70%, darken($alt,4) 90%);
+        color: darken($text, 2);
         }
 }
 
