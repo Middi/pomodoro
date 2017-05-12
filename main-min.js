@@ -1,0 +1,1 @@
+function draw(){mainContext.beginPath(),mainContext.arc(200,460,160,1.5*Math.PI,1*Math.PI,!1),mainContext.lineWidth=15,mainContext.strokeStyle="rgba(197, 35, 112, 1.0)",mainContext.stroke()}var mainCanvas=document.getElementById("myCanvas"),mainContext=mainCanvas.getContext("2d");draw();

@@ -42,3 +42,21 @@ input, select {
 
 html {
   height: 100%; }
+
+body {
+  background: #24232b; }
+
+#counter {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 200px;
+  height: 90px;
+  border: 2px solid white;
+  text-align: center; }
+
+main {
+  width: 405px;
+  height: 405px;
+  margin: 0 auto; }
