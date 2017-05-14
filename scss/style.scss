@@ -26,36 +26,36 @@ canvas {
 
     // shadow on timer
     -moz-box-shadow:    
-    0 0 1px 25px $background,
-    0 0 0 27px rgba(43, 44, 58, 1.0),
+    0 0 1px 22px $background,
+    0 0 0 24px rgba(43, 44, 58, 1.0),
     0 0 1px 40px $background,
-    0 0 2px 41px rgba(43, 44, 58, 0.6),
-    0 0 1px 58px $background,
-    0 0 4px 59px rgba(43, 44, 58, 0.4),
-    0 0 1px 69px $background,
-    0 0 6px 70px rgba(43, 44, 58, 0.2),
-    inset 0 0 20px 12px rgba(20, 21, 25, 1.0);
+    0 0 4px 42px rgba(43, 44, 58, 0.6),
+    0 0 1px 65px $background,
+    0 0 5px 68px rgba(43, 44, 58, 0.3),
+    0 0 1px 88px $background,
+    0 0 6px 92px rgba(43, 44, 58, 0.1),
+    inset 0 0 20px 12px rgba(2, 2, 2, 0.4); 
 
     -webkit-box-shadow: 
-    0 0 1px 25px $background,
-    0 0 0 27px rgba(43, 44, 58, 1.0),
+    0 0 1px 22px $background,
+    0 0 0 24px rgba(43, 44, 58, 1.0),
     0 0 1px 40px $background,
-    0 0 2px 41px rgba(43, 44, 58, 0.6),
-    0 0 1px 58px $background,
-    0 0 4px 59px rgba(43, 44, 58, 0.4),
-    0 0 1px 69px $background,
-    0 0 6px 70px rgba(43, 44, 58, 0.2),
-    inset 0 0 20px 12px rgba(20, 21, 25, 1.0); 
+    0 0 4px 42px rgba(43, 44, 58, 0.6),
+    0 0 1px 65px $background,
+    0 0 5px 68px rgba(43, 44, 58, 0.3),
+    0 0 1px 88px $background,
+    0 0 6px 92px rgba(43, 44, 58, 0.1),
+    inset 0 0 20px 12px rgba(2, 2, 2, 0.4); 
     
     box-shadow:         
-    0 0 1px 25px $background,
-    0 0 0 28px rgba(43, 44, 58, 1.0),
-    0 0 1px 41px $background,
-    0 0 2px 43px rgba(43, 44, 58, 0.6),
-    0 0 1px 58px $background,
-    0 0 4px 60px rgba(43, 44, 58, 0.4),
-    0 0 1px 76px $background,
-    0 0 6px 78px rgba(43, 44, 58, 0.2),
+    0 0 1px 22px $background,
+    0 0 0 24px rgba(43, 44, 58, 1.0),
+    0 0 1px 40px $background,
+    0 0 4px 42px rgba(43, 44, 58, 0.6),
+    0 0 1px 65px $background,
+    0 0 5px 68px rgba(43, 44, 58, 0.3),
+    0 0 1px 88px $background,
+    0 0 6px 92px rgba(43, 44, 58, 0.1),
     inset 0 0 20px 12px rgba(2, 2, 2, 0.4); 
 
     z-index: -1;
