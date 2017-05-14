@@ -17,11 +17,14 @@ main {
     padding: 0 10px;
 } 
 
+canvas {
+    margin: 34px 0 20px;
+}
 
 #counter {
     position: absolute;
     left: 50%;
-    top: 276px;
+    top: 250px;
     height: 178px;
     width: 178px;
     padding: 65px 0;
