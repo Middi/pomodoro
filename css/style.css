@@ -163,16 +163,16 @@ main {
   main {
     width: 300px;
     padding: 0 10px;
-    margin: 40px auto 0; }
+    margin: 20px auto 0; }
   canvas {
     margin: 34px 0 20px; }
   #counter {
-    top: 250px;
+    top: 230px;
     height: 178px;
     width: 178px;
     padding: 40px 0; }
   #counter-content {
-    top: 252px;
+    top: 232px;
     height: 180px;
     width: 180px;
     padding: 30px 0; }
