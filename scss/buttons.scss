@@ -11,7 +11,7 @@
     height:     50px;
     width:     300px;
 	border-radius:        1px;
-	transition: all 0.3s ease;
+	transition: all 0.5s ease;
 }
 
 
@@ -23,10 +23,10 @@
     
     background: $brand;
 
-    &:hover {background: darken($brand, 2)}
+    &:hover {background: darken($brand, 4)}
 
     &:active {
-        background: darken($brand, 4);
+        background: darken($brand, 6);
         color:       darken($text, 2);
         transform:        scale(0.99);
         }
