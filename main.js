@@ -44,7 +44,6 @@ function convertMins(seconds) {
     else {
         return minutes + ':' + seconds;
     }
-
 }
 
 // countdown function
