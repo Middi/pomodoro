@@ -99,7 +99,7 @@ html {
   height: 100%; }
 
 body {
-  background: #1a1a22; }
+  background: #1c1b24; }
 
 canvas {
   width: 100%;
@@ -117,7 +117,7 @@ canvas {
   border-radius: 100%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  box-shadow: 0 0 1px 22px #1a1a22, 0 0 0 24px #212230, 0 0 1px 40px #1a1a22, 0 0 4px 42px rgba(33, 34, 48, 0.6), 0 0 1px 65px #1a1a22, 0 0 5px 68px rgba(33, 34, 48, 0.3), 0 0 1px 88px #1a1a22, 0 0 6px 92px rgba(33, 34, 48, 0.1), inset 0 0 20px 12px rgba(2, 2, 2, 0.4);
+  box-shadow: 0 0 1px 22px #1c1b24, 0 0 0 24px #212230, 0 0 1px 40px #1c1b24, 0 0 4px 42px rgba(33, 34, 48, 0.6), 0 0 1px 65px #1c1b24, 0 0 5px 68px rgba(33, 34, 48, 0.3), 0 0 1px 88px #1c1b24, 0 0 6px 92px rgba(33, 34, 48, 0.1), inset 0 0 20px 12px rgba(2, 2, 2, 0.4);
   z-index: -1; }
 
 #counter-content {
