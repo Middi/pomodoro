@@ -36,10 +36,13 @@ var timeLeft = 1500;
 var timeLeftRest = 300;
 var intervalId;
 var audio = new Audio('alarm.mp3');
+
+// dom variables
 var counterDom = document.getElementById('time');
 var counterContent = document.getElementById('counter-content');
 var myP = document.getElementById("myP");
 
+//colors
 var pink = "rgba(216, 0, 96, 1.0)";
 var white = "rgba(208, 208, 208, 1.0)";
 
@@ -59,8 +62,6 @@ function convertMins(secs) {
 }
 
 function reset() {
-    // take input and make seconds from it
-    // timeLeft = seconds;
     counter = 0;
     counterContent.style.background = "none";
     counterDom.innerHTML = (convertMins(timeLeft - counter));myP.style.color = pink;
