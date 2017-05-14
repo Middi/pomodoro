@@ -117,7 +117,6 @@ nav a {
 .btn {
   border: none;
   background: none;
-  margin: 6px;
   color: #d0d0d0;
   font-size: 2rem;
   border-radius: 1px;
@@ -198,7 +197,5 @@ button {
     width: 178px;
     padding: 65px 0; }
   .btn {
-    position: absolute;
-    bottom: 50px;
-    left: 50%;
-    transform: translate(-50%, -50%); } }
+    margin-top: 40px;
+    width: 90%; } }
