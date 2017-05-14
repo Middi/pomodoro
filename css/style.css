@@ -190,6 +190,6 @@ button {
     padding: 65px 0; }
   .btn {
     position: absolute;
-    bottom: 60px;
+    bottom: 50px;
     left: 50%;
     transform: translate(-50%, -50%); } }
