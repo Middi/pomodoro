@@ -1,47 +1,37 @@
-/*=============================================
-=                 MEDIA QUERIES               =
-=============================================*/
-
+/*=======================================
+=              MEDIA QUERIES           =
+=======================================*/
 
 
 /* -- BREAK 1 -- */
 
 @media all and (max-width: 500px) {
-  html {
-    font-size: 10px;
-  }
 
-.logo {
-    height: 32px;
-    width: auto;
-    padding: 9px 4px 0 0;
-}
+    html {font-size: 10px}
 
-main {
-    width: 300px;
-    margin: 40px auto 0;
-    padding: 0 10px;
-} 
+    .logo {
+        height:         32px;
+        width:          auto;
+        padding: 9px 4px 0 0;
+    }
 
-canvas {
-    margin: 34px 0 20px;
-}
+    main {
+        width:        300px;
+        padding:     0 10px;
+        margin: 40px auto 0;
+    }
 
-#counter {
-    position: absolute;
-    left: 50%;
-    top: 250px;
-    height: 178px;
-    width: 178px;
-    padding: 65px 0;
-}
+    canvas {margin: 34px 0 20px}
 
+    #counter {
+        top:      250px;
+        height:   178px;
+        width:    178px;
+        padding: 65px 0;
+    }
 
-.btn {
-    margin-top: 40px;
-    width: 90%;
-}
-
-
-
+    .btn {
+        width:       90%;
+        margin-top: 40px;
+    }
 }
