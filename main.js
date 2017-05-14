@@ -55,12 +55,12 @@ function countDown(mins) {
     timeLeft = mins * 60;
     counter = 0;
     counterDom.style.background = "none";
-    counterDom.innerHTML = "<h3>" + (convertMins(timeLeft - counter)) + "</h3><p>Rest 5:00</p>";
+    counterDom.innerHTML = "<h4>+</h4><h3>" + (convertMins(timeLeft - counter)) + "</h3><h4>-</h4><p>Rest 5:00</p>";
     count();
     function count() {
         // if time hasn't run out update dom
         if (timeLeft - counter > 0) {
-            counterDom.innerHTML = "<h3>" + (convertMins(timeLeft - counter)) + "</h3><p>Rest 5:00</p>";
+            counterDom.innerHTML = "<h4>+</h4><h3>" + (convertMins(timeLeft - counter)) + "</h3><h4>-</h4><p>Rest 5:00</p>";
             counter++;
         }
         // if time has run out, run 5minute rest timer and play sound
