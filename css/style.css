@@ -122,11 +122,11 @@ canvas {
 
 #counter-content {
   left: 50%;
-  top: 382px;
+  top: 386px;
   height: 230px;
   width: 230px;
   position: absolute;
-  padding: 42px 0;
+  padding: 38px 0;
   border-radius: 100%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%); }
@@ -147,7 +147,7 @@ main {
 
 .divplus, .divminus {
   z-index: 1;
-  height: 46px; }
+  height: 45px; }
 
 /*=======================================
 =              MEDIA QUERIES           =
@@ -167,7 +167,7 @@ main {
   canvas {
     margin: 34px 0 20px; }
   #counter {
-    top: 230px;
+    top: 232px;
     height: 178px;
     width: 178px;
     padding: 40px 0; }
