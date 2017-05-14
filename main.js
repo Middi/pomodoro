@@ -5,8 +5,11 @@ var mainContext = mainCanvas.getContext("2d");
 
 function draw() {
 
+    var arcStart = 0 * Math.PI;
+    var arcEnd = 2 * Math.PI;
+
     mainContext.beginPath();
-    mainContext.arc(150, 150, 100, 0 * Math.PI, 2 * Math.PI, false);
+    mainContext.arc(150, 150, 100, arcStart, arcEnd, false);
 
     // draw the full circle in grey
     mainContext.lineWidth = 10;
@@ -14,7 +17,7 @@ function draw() {
     mainContext.stroke();
 
     mainContext.beginPath();
-    mainContext.arc(150, 150, 100, 1.5 * Math.PI, 1 * Math.PI, false);
+    mainContext.arc(150, 150, 100, arcStart, arcEnd, false);
 
     // draw the pink progress
     mainContext.lineWidth = 10;
@@ -80,14 +83,14 @@ function rest() {
     // timeLeft set to 5mins with 300
     timeLeft = 300;
     counter = 0;
-    counterDom.innerHTML = "<h3>" + (convertMins(timeLeft - counter)) + "</h3><p>Rest</p>";
+    counterDom.innerHTML = "<h4>+</h4><h3>" + (convertMins(timeLeft - counter)) + "</h3><h4>-</h4><p>Rest 5:00</p>";
     counterDom.style.background = "rgba(216, 0, 96, 1.0)";
 
     restCount();
     function restCount() {
         // if time hasn't run out update dom
         if (timeLeft - counter > 0) {
-            counterDom.innerHTML = "<h3>" + (convertMins(timeLeft - counter)) + "</h3><p>Rest</p>";
+            counterDom.innerHTML = "<h4>+</h4><h3>" + (convertMins(timeLeft - counter)) + "</h3><h4>-</h4><p>Rest 5:00</p>";
             counter++;
         }
         // if time has run out, run countdown timer and play sound
@@ -129,6 +132,6 @@ function stopPomodoro() {
     clearInterval(intervalId);
     audio.pause();
     counterDom.style.background = "none";
-    counterDom.innerHTML = "<h3>25:00</h3><p>Rest 5:00</p>";
+    counterDom.innerHTML = "<h4>+</h4><h3>25:00</h3><h4>-</h4><p>Rest 5:00</p>";
     button.innerHTML = 'START';
 }

@@ -21,20 +21,13 @@
 
 .bg-brand {
     
-    background: linear-gradient(180deg, $brand, $brand 80%, $alt 98%);
+    background: $brand;
 
-    &:hover {background: linear-gradient(180deg,
-        darken($brand, 2),
-        darken($brand, 2) 80%,
-        darken($alt,2) 98%);}
+    &:hover {background: darken($brand, 2)}
 
     &:active {
-        background: linear-gradient(180deg,
-        darken($brand, 4),
-        darken($brand, 4) 70%,
-        darken($alt,4) 98%);
-
-        color: darken($text, 2);
-        transform:  scale(0.99);
+        background: darken($brand, 4);
+        color:       darken($text, 2);
+        transform:        scale(0.99);
         }
 }

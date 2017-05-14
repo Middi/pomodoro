@@ -130,14 +130,11 @@ nav a {
   transition: all 0.3s ease; }
 
 .bg-brand {
-  background: -webkit-linear-gradient(top, #d80060, #d80060 80%, #dc0095 98%);
-  background: linear-gradient(180deg, #d80060, #d80060 80%, #dc0095 98%); }
+  background: #d80060; }
   .bg-brand:hover {
-    background: -webkit-linear-gradient(top, #ce005b, #ce005b 80%, #d2008e 98%);
-    background: linear-gradient(180deg, #ce005b, #ce005b 80%, #d2008e 98%); }
+    background: #ce005b; }
   .bg-brand:active {
-    background: -webkit-linear-gradient(top, #c40057, #c40057 70%, #c80087 98%);
-    background: linear-gradient(180deg, #c40057, #c40057 70%, #c80087 98%);
+    background: #c40057;
     color: #cbcbcb;
     -webkit-transform: scale(0.99);
             transform: scale(0.99); }
