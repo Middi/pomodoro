@@ -33,15 +33,15 @@ var audio = new Audio('alarm.mp3');
 var counterDom = document.getElementById('counter');
 
 // conversion for minutes
-function convertMins(secs) {
+function convertMins(seconds) {
 
-    var minutes = Math.floor(secs / 60);
-    var seconds = secs % 60;
+    var minutes = Math.floor(seconds / 60);
 
     // add zeros to front of single digits
     if (seconds < 10) {
         return minutes + ':' + '0' + seconds;
-    } else {
+    }
+    else {
         return minutes + ':' + seconds;
     }
 
@@ -64,20 +64,21 @@ function countDown(mins) {
             audio.play();
         }
     }
+    // interval timer 1 second
     setInterval(count, 1000);
-
-
 }
 
+// rest timer
 function rest() {
-
+    // timeLeft set to 5mins with 300
     timeLeft = 10;
     counter = 0;
+    // if time hasn't run out update dom
     if (timeLeft - counter > 0) {
         counterDom.innerHTML = "<h3>" + (convertMins(timeLeft - counter)) + "</h3><p>Rest</p>";
         counter++;
     }
-
+    // if time has run out, run countdown timer and play sound
     else {
         countDown(1);
         audio.play();
@@ -86,7 +87,7 @@ function rest() {
 
 
 
-
+// event listeners
 var button = document.getElementById("start-button");
 
 button.addEventListener("click", function () {
@@ -94,7 +95,8 @@ button.addEventListener("click", function () {
 
     if (button.innerHTML === 'START') {
         button.innerHTML = 'STOP';
-    } else {
+    }
+    else {
         button.innerHTML = 'START';
     }
 });
