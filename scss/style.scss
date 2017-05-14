@@ -12,6 +12,7 @@ canvas {
     width:  100%;
     height: 100%;
     margin: 60px 0 20px;
+    z-index: -1;
 }
 
 #counter {
@@ -62,6 +63,17 @@ canvas {
     
 }
 
+#counter-content {
+    left:     50%;
+    top:    386px;
+    height: 230px;
+    width:  230px;
+    position:  absolute;
+    padding:     42px 0;
+    border-radius: 100%;
+    transform: translate(-50%, -50%);
+}
+
 main {
     width:         420px;
     padding:      0 30px;
@@ -74,5 +86,11 @@ main {
     width:          auto;
     padding: 7px 5px 0 0;
 }
+
+
+.hidden {
+    display: none;
+}
+
 
 @import "media-queries";
