@@ -33,7 +33,7 @@ draw();
 
 var counter = 0;
 var timeLeft = 1500;
-var timeLeftRest = 10;
+var timeLeftRest = 300;
 var intervalId;
 var audio = new Audio('alarm.mp3');
 var counterDom = document.getElementById('time');
