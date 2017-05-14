@@ -28,39 +28,51 @@ draw();
 var counter = 0;
 var timeLeft;
 
-function convertMins (secs) {
+function convertMins(secs) {
 
     var minutes = Math.floor(secs / 60);
     var seconds = secs % 60;
 
-if(seconds < 10) {
-    return minutes + ':' + '0' + seconds;
-}
-else {
-    return minutes + ':' + seconds;
-}
-    
+    if (seconds < 10) {
+        return minutes + ':' + '0' + seconds;
+    } else {
+        return minutes + ':' + seconds;
+    }
+
 }
 
 function countDown(mins) {
 
 
-timeLeft = mins * 60 - 1;
+    timeLeft = mins * 60;
 
 
-function count() {
-document.getElementById('counter').innerHTML =
+    function count() {
+
+    if (timeLeft - counter > 0) {
+        document.getElementById('counter').innerHTML =
             "<h3>" + (convertMins(timeLeft - counter)) + "</h3>";
-counter++;
+        counter++;
+    }
+    else {
+        document.getElementById('counter').innerHTML =
+            "<h3>TIME UP</h3>";
+    }
 
-}
-setInterval(count, 1000);
-
+    }
+        setInterval(count, 1000);
+    
+    
 }
 
 var button = document.getElementById("start-button");
 
-button.addEventListener("click", function() {
-    countDown(25);
-    button.innerHTML = 'STOP';
+button.addEventListener("click", function () {
+    countDown(1);
+
+    if (button.innerHTML === 'START') {
+        button.innerHTML = 'STOP';
+    } else {
+        button.innerHTML = 'START';
+    }
 });
