@@ -180,6 +180,10 @@ button {
 @media all and (max-width: 500px) {
   html {
     font-size: 10px; }
+  .logo {
+    height: 32px;
+    width: auto;
+    padding: 9px 4px 0 0; }
   main {
     width: 300px;
     margin: 40px auto 0;
