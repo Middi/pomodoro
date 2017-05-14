@@ -35,7 +35,7 @@ var counter = 0;
 var timeLeft;
 var intervalId;
 var audio = new Audio('alarm.mp3');
-var counterDom = document.getElementById('counter');
+var counterDom = document.getElementById('time');
 
 // conversion for minutes
 function convertMins(secs) {
@@ -53,17 +53,17 @@ function convertMins(secs) {
 }
 
 // countdown function
-function countDown(mins) {
+function countDown(seconds) {
     // take input and make seconds from it
-    timeLeft = mins * 60;
+    timeLeft = seconds;
     counter = 0;
-    counterDom.style.background = "none";
-    counterDom.innerHTML = "<h4>+</h4><h3>" + (convertMins(timeLeft - counter)) + "</h3><h4>-</h4><p>Rest 5:00</p>";
+    document.getElementById('counter').style.background = "none";
+    counterDom.innerHTML = (convertMins(timeLeft - counter));
     count();
     function count() {
         // if time hasn't run out update dom
         if (timeLeft - counter > 0) {
-            counterDom.innerHTML = "<h4>+</h4><h3>" + (convertMins(timeLeft - counter)) + "</h3><h4>-</h4><p>Rest 5:00</p>";
+            counterDom.innerHTML = (convertMins(timeLeft - counter));
             counter++;
         }
         // if time has run out, run 5minute rest timer and play sound
@@ -83,20 +83,20 @@ function rest() {
     // timeLeft set to 5mins with 300
     timeLeft = 300;
     counter = 0;
-    counterDom.innerHTML = "<h4>+</h4><h3>" + (convertMins(timeLeft - counter)) + "</h3><h4>-</h4><p>Rest 5:00</p>";
-    counterDom.style.background = "rgba(216, 0, 96, 1.0)";
+    counterDom.innerHTML = (convertMins(timeLeft - counter));
+    document.getElementById('counter').style.background = "rgba(216, 0, 96, 1.0)";
 
     restCount();
     function restCount() {
         // if time hasn't run out update dom
         if (timeLeft - counter > 0) {
-            counterDom.innerHTML = "<h4>+</h4><h3>" + (convertMins(timeLeft - counter)) + "</h3><h4>-</h4><p>Rest 5:00</p>";
+            counterDom.innerHTML = (convertMins(timeLeft - counter));
             counter++;
         }
         // if time has run out, run countdown timer and play sound
         else {
             clearInterval(intervalId);
-            countDown(25);
+            countDown(1500);
             audio.play();
             return;
         }
@@ -120,18 +120,24 @@ function startPomodoro() {
     button.addEventListener('click', stopPomodoro);
     clearInterval(intervalId);
     audio.pause();
-    counterDom.style.background = "none";
-    countDown(25);
+    document.getElementById('counter').style.background = "none";
+    countDown(15);
     button.innerHTML = 'RESTART';
 }
 
-// pause Pomodoro
+// reset Pomodoro
 function stopPomodoro() {
     button.removeEventListener('click', stopPomodoro);
     button.addEventListener('click', startPomodoro);
     clearInterval(intervalId);
     audio.pause();
-    counterDom.style.background = "none";
-    counterDom.innerHTML = "<h4>+</h4><h3>25:00</h3><h4>-</h4><p>Rest 5:00</p>";
+    document.getElementById('counter').style.background = "none";
+    counterDom.innerHTML = "25:00";
     button.innerHTML = 'START';
 }
+
+
+
+document.getElementById('plus').addEventListener('click', function () {          
+    console.log("hey");
+        });
