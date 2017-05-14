@@ -29,6 +29,7 @@ draw();
 
 var counter = 0;
 var timeLeft;
+var intervalId;
 var audio = new Audio('alarm.mp3');
 var counterDom = document.getElementById('counter');
 
@@ -49,8 +50,11 @@ function convertMins(seconds) {
 // countdown function
 function countDown(mins) {
     // take input and make seconds from it
-    timeLeft = mins * 6;
-
+    timeLeft = mins * 9;
+    counter = 0;
+    counterDom.style.background = "none";
+    counterDom.innerHTML = "<h3>" + (convertMins(timeLeft - counter)) + "</h3>";
+    count();
     function count() {
         // if time hasn't run out update dom
         if (timeLeft - counter > 0) {
@@ -59,29 +63,44 @@ function countDown(mins) {
         }
         // if time has run out, run 5minute rest timer and play sound
         else {
+            clearInterval(intervalId);
             rest();
             audio.play();
         }
     }
+
     // interval timer 1 second
-    setInterval(count, 1000);
+    intervalId = setInterval(count, 1000);
 }
 
 // rest timer
 function rest() {
     // timeLeft set to 5mins with 300
-    timeLeft = 10;
+    timeLeft = 6;
     counter = 0;
-    // if time hasn't run out update dom
-    if (timeLeft - counter > 0) {
-        counterDom.innerHTML = "<h3>" + (convertMins(timeLeft - counter)) + "</h3><p>Rest</p>";
-        counter++;
+    counterDom.innerHTML = "<h3>" + (convertMins(timeLeft - counter)) + "</h3><p>Rest</p>";
+    counterDom.style.background = "#34cd37";
+    restCount();
+    function restCount() {
+        // if time hasn't run out update dom
+        if (timeLeft - counter > 0) {
+            counterDom.innerHTML = "<h3>" + (convertMins(timeLeft - counter)) + "</h3><p>Rest</p>";
+            counter++;
+        }
+        // if time has run out, run countdown timer and play sound
+        else {
+            clearInterval(intervalId);
+            countDown(1);
+            audio.play();
+            return;
+        }
     }
-    // if time has run out, run countdown timer and play sound
-    else {
-        countDown(1);
-        audio.play();
-    }
+
+    // interval timer 1 second
+    intervalId = setInterval(restCount, 1000);
+
+
+
 }
 
 
@@ -89,13 +108,25 @@ function rest() {
 // event listeners
 var button = document.getElementById("start-button");
 
-button.addEventListener("click", function () {
-    countDown(1);
+// initially add event istener to run start
+button.addEventListener('click', startPomodoro);
 
-    if (button.innerHTML === 'START') {
-        button.innerHTML = 'STOP';
-    }
-    else {
-        button.innerHTML = 'START';
-    }
-});
+
+function startPomodoro() {
+    // remove the event listern
+    button.removeEventListener('click', startPomodoro);
+    button.addEventListener('click', stopPomodoro);
+    clearInterval(intervalId);
+    counterDom.style.background = "none";
+    countDown(1);
+    button.innerHTML = 'STOP';
+}
+
+function stopPomodoro() {
+    button.removeEventListener('click', stopPomodoro);
+    button.addEventListener('click', startPomodoro);
+    clearInterval(intervalId);
+    counterDom.style.background = "none";
+    counterDom.innerHTML = "<h3>25:00</h3>";
+    button.innerHTML = 'START';
+}

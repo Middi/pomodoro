@@ -161,7 +161,7 @@ canvas {
   border-radius: 100%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  box-shadow: 0 0 1px 25px #20222b, 0 0 0 27px #2b2c3a, 0 0 1px 40px #20222b, 0 0 2px 41px rgba(43, 44, 58, 0.6), 0 0 1px 58px #20222b, 0 0 4px 59px rgba(43, 44, 58, 0.4), 0 0 1px 76px #20222b, 0 0 6px 77px rgba(43, 44, 58, 0.2), inset 0 0 20px 12px #141519;
+  box-shadow: 0 0 1px 25px #20222b, 0 0 0 28px #2b2c3a, 0 0 1px 41px #20222b, 0 0 2px 43px rgba(43, 44, 58, 0.6), 0 0 1px 58px #20222b, 0 0 4px 60px rgba(43, 44, 58, 0.4), 0 0 1px 76px #20222b, 0 0 6px 78px rgba(43, 44, 58, 0.2), inset 0 0 20px 12px rgba(2, 2, 2, 0.4);
   z-index: -1; }
 
 main {
