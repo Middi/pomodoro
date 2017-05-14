@@ -1,3 +1,5 @@
+// =========== Canvas ========= //
+
 var mainCanvas = document.getElementById("myCanvas");
 var mainContext = mainCanvas.getContext("2d");
 
@@ -10,7 +12,6 @@ function draw() {
     mainContext.lineWidth = 10;
     mainContext.strokeStyle = "rgba(53, 50, 56, 1.0)";
     mainContext.stroke();
-
 
     mainContext.beginPath();
     mainContext.arc(150, 150, 100, 1.5 * Math.PI, 1 * Math.PI, false);
@@ -98,34 +99,33 @@ function rest() {
 
     // interval timer 1 second
     intervalId = setInterval(restCount, 1000);
-
-
-
 }
 
 
+//  --------- event listeners --------- //
 
-// event listeners
 var button = document.getElementById("start-button");
 
 // initially add event istener to run start
 button.addEventListener('click', startPomodoro);
 
-
+// start Pomodoro
 function startPomodoro() {
-    // remove the event listern
     button.removeEventListener('click', startPomodoro);
     button.addEventListener('click', stopPomodoro);
     clearInterval(intervalId);
+    audio.pause();
     counterDom.style.background = "none";
     countDown(1);
-    button.innerHTML = 'STOP';
+    button.innerHTML = 'RESTART';
 }
 
+// pause Pomodoro
 function stopPomodoro() {
     button.removeEventListener('click', stopPomodoro);
     button.addEventListener('click', startPomodoro);
     clearInterval(intervalId);
+    audio.pause();
     counterDom.style.background = "none";
     counterDom.innerHTML = "<h3>25:00</h3>";
     button.innerHTML = 'START';
