@@ -22,15 +22,19 @@
 
 <body>
     <main>
-        <h1><img src="images/tomato.png" class="logo" />Pomodoro Timer</h1>
+        <h1><img src="images/tomato.png" class="logo" />Pomod<span>o</span>ro Timer</h1>
+
         <canvas id="myCanvas" width="300" height="300"></canvas>
+
         <div id="counter">
-            <h4>+</h4>
-            <h3>25:00</h3>
-            <h4>-</h4>
+            <h4 id="plus">+</h4>
+            <h3 id="time">25:00</h3>
+            <h4 id="minus">-</h4>
             <p>Rest 5:00</p>
         </div>
+
         <button role="button" id="start-button" class="btn bg-brand">START</button>
+
     </main>
 
     <!-- JAVASCIPT -->
