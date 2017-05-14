@@ -65,7 +65,7 @@ canvas {
 
 #counter-content {
     left:     50%;
-    top:    386px;
+    top:    382px;
     height: 230px;
     width:  230px;
     position:  absolute;
@@ -92,5 +92,9 @@ main {
     display: none;
 }
 
+.divplus, .divminus {
+    z-index: 1;
+    height: 46px;
+}
 
 @import "media-queries";
