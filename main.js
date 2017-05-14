@@ -20,6 +20,8 @@ function draw() {
     mainContext.strokeStyle = "rgba(216, 0, 96, 1.0)";
     mainContext.stroke();
 }
+
+// draw canvas
 draw();
 
 
@@ -27,12 +29,16 @@ draw();
 
 var counter = 0;
 var timeLeft;
+var audio = new Audio('alarm.mp3');
+var counterDom = document.getElementById('counter');
 
+// conversion for minutes
 function convertMins(secs) {
 
     var minutes = Math.floor(secs / 60);
     var seconds = secs % 60;
 
+    // add zeros to front of single digits
     if (seconds < 10) {
         return minutes + ':' + '0' + seconds;
     } else {
@@ -41,31 +47,45 @@ function convertMins(secs) {
 
 }
 
+// countdown function
 function countDown(mins) {
-
-
-    timeLeft = mins * 60;
-
+    // take input and make seconds from it
+    timeLeft = mins * 6;
 
     function count() {
-
+        // if time hasn't run out update dom
         if (timeLeft - counter > 0) {
-            document.getElementById('counter').innerHTML =
-                "<h3>" + (convertMins(timeLeft - counter)) + "</h3>";
+            counterDom.innerHTML = "<h3>" + (convertMins(timeLeft - counter)) + "</h3>";
             counter++;
         }
+        // if time has run out, run 5minute rest timer and play sound
         else {
-            document.getElementById('counter').innerHTML =
-                "<h3>TIME UP</h3>";
-            var audio = new Audio('alarm.mp3');
+            rest();
             audio.play();
         }
-
     }
     setInterval(count, 1000);
 
 
 }
+
+function rest() {
+
+    timeLeft = 10;
+    counter = 0;
+    if (timeLeft - counter > 0) {
+        counterDom.innerHTML = "<h3>" + (convertMins(timeLeft - counter)) + "</h3><p>Rest</p>";
+        counter++;
+    }
+
+    else {
+        countDown(1);
+        audio.play();
+    }
+}
+
+
+
 
 var button = document.getElementById("start-button");
 
