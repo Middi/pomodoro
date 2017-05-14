@@ -29,7 +29,7 @@ function draw() {
 draw();
 
 
-// ======= Timer ======== //
+// ============ Timer ============= //
 
 var counter = 0;
 var timeLeft = 1500;
@@ -37,12 +37,12 @@ var timeLeftRest = 300;
 var intervalId;
 var audio = new Audio('alarm.mp3');
 
-// dom variables
+// DOM variables
 var counterDom = document.getElementById('time');
 var counterContent = document.getElementById('counter-content');
 var myP = document.getElementById("myP");
 
-//colors
+// Colors
 var pink = "rgba(216, 0, 96, 1.0)";
 var white = "rgba(208, 208, 208, 1.0)";
 
@@ -61,6 +61,7 @@ function convertMins(secs) {
     }
 }
 
+// Reset
 function reset() {
     counter = 0;
     counterContent.style.background = "none";
@@ -70,7 +71,7 @@ function reset() {
     myP.innerHTML = "Rest 5:00";
 }
 
-// countdown function
+// Main function
 function countDown() {
     // take input and make seconds from it
     // timeLeft = seconds;
@@ -85,7 +86,7 @@ function countDown() {
     count();
 
     function count() {
-        // if time hasn't run out update dom
+        // if time hasn't run out update DOM
         if (timeLeft - counter > 0) {
             counterDom.innerHTML = (convertMins(timeLeft - counter));
             counter++;
@@ -119,9 +120,8 @@ function rest() {
         if (timeLeftRest - counter > 0) {
             counterDom.innerHTML = (convertMins(timeLeftRest - counter));
             counter++;
-
         }
-        // if time has run out, run countdown timer and play sound
+        // if time has run out, run stop Pomodoro
         else {
             clearInterval(intervalId);
             stopPomodoro();
@@ -165,8 +165,9 @@ function stopPomodoro() {
 }
 
 
-
+// DOM variables for plus and minus
 var plus = document.getElementById('plus');
+var minus = document.getElementById('minus');
 
 plus.addEventListener('click', function (e) {
     e.preventDefault();
@@ -174,8 +175,6 @@ plus.addEventListener('click', function (e) {
     counterDom.innerHTML = (convertMins(timeLeft - counter));
 
 });
-
-var minus = document.getElementById('minus');
 
 minus.addEventListener('click', function (e) {
     e.preventDefault();
