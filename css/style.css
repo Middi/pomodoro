@@ -53,9 +53,9 @@ h1, h2, h3, h4 {
   color: #d0d0d0; }
 
 h1 {
-  font-size: 3em;
+  font-size: 2.8em;
   font-weight: 300;
-  color: #8b8ea7; }
+  color: #afb0b9; }
 
 h2 {
   font-size: 2.827em;
@@ -164,6 +164,11 @@ main {
   margin: 70px auto 0;
   text-align: center;
   padding: 0 30px; }
+
+.logo {
+  height: 38px;
+  width: auto;
+  padding: 7px 5px 0 0; }
 
 button {
   background: #d80060; }

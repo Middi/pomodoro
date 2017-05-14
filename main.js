@@ -49,20 +49,22 @@ function countDown(mins) {
 
     function count() {
 
-    if (timeLeft - counter > 0) {
-        document.getElementById('counter').innerHTML =
-            "<h3>" + (convertMins(timeLeft - counter)) + "</h3>";
-        counter++;
-    }
-    else {
-        document.getElementById('counter').innerHTML =
-            "<h3>TIME UP</h3>";
-    }
+        if (timeLeft - counter > 0) {
+            document.getElementById('counter').innerHTML =
+                "<h3>" + (convertMins(timeLeft - counter)) + "</h3>";
+            counter++;
+        }
+        else {
+            document.getElementById('counter').innerHTML =
+                "<h3>TIME UP</h3>";
+            var audio = new Audio('alarm.mp3');
+            audio.play();
+        }
 
     }
-        setInterval(count, 1000);
-    
-    
+    setInterval(count, 1000);
+
+
 }
 
 var button = document.getElementById("start-button");
