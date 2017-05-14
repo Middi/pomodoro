@@ -14,7 +14,8 @@
 	color: $text;
     font-size: 2rem;
 	border-radius: 1px;
-	padding: 0.3em 4.5em;
+    height: 50px;
+    width: 300px;
 	transition: all 0.3s ease;
 }
 
@@ -31,6 +32,8 @@
 
     &:active {
         background: linear-gradient( 180deg, darken($brand, 4), darken($brand, 4) 70%, darken($alt,4) 98%);
+
         color: darken($text, 2);
+        transform: scale(0.99);
         }
 }
