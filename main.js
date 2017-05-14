@@ -32,10 +32,13 @@ draw();
 // ======= Timer ======== //
 
 var counter = 0;
-var timeLeft;
+var timeLeft = 1500;
+var timeLeftRest = 10;
 var intervalId;
 var audio = new Audio('alarm.mp3');
 var counterDom = document.getElementById('time');
+var counterContent = document.getElementById('counter-content');
+var myP = document.getElementById("myP");
 
 // conversion for minutes
 function convertMins(secs) {
@@ -52,14 +55,31 @@ function convertMins(secs) {
     }
 }
 
-// countdown function
-function countDown(seconds) {
+function reset() {
     // take input and make seconds from it
-    timeLeft = seconds;
+    // timeLeft = seconds;
     counter = 0;
-    document.getElementById('counter').style.background = "none";
+    counterContent.style.background = "none";
+    counterDom.innerHTML = (convertMins(timeLeft - counter));myP.style.color = "rgba(216, 0, 96, 1.0)";
+    minus.style.color = "rgba(208, 208, 208, 1.0)";
+    plus.style.color = "rgba(208, 208, 208, 1.0)";
+    myP.innerHTML = "Rest 5:00";
+}
+
+// countdown function
+function countDown() {
+    // take input and make seconds from it
+    // timeLeft = seconds;
+    counter = 0;
+    counterContent.style.background = "none";
     counterDom.innerHTML = (convertMins(timeLeft - counter));
+    myP.style.color = "rgba(216, 0, 96, 1.0)";
+    minus.style.color = "rgba(208, 208, 208, 1.0)";
+    plus.style.color = "rgba(208, 208, 208, 1.0)";
+    myP.innerHTML = "Rest 5:00";
+
     count();
+
     function count() {
         // if time hasn't run out update dom
         if (timeLeft - counter > 0) {
@@ -81,22 +101,26 @@ function countDown(seconds) {
 // rest timer
 function rest() {
     // timeLeft set to 5mins with 300
-    timeLeft = 300;
     counter = 0;
-    counterDom.innerHTML = (convertMins(timeLeft - counter));
-    document.getElementById('counter').style.background = "rgba(216, 0, 96, 1.0)";
+    counterDom.innerHTML = (convertMins(timeLeftRest - counter));
+    counterContent.style.background = "rgba(216, 0, 96, 1.0)";
+    myP.style.color = "rgba(208, 208, 208, 1.0)";
+    minus.style.color = "rgba(216, 0, 96, 1.0)";
+    plus.style.color = "rgba(216, 0, 96, 1.0)";
+    myP.innerHTML = "REST";
 
     restCount();
     function restCount() {
         // if time hasn't run out update dom
-        if (timeLeft - counter > 0) {
-            counterDom.innerHTML = (convertMins(timeLeft - counter));
+        if (timeLeftRest - counter > 0) {
+            counterDom.innerHTML = (convertMins(timeLeftRest - counter));
             counter++;
+
         }
         // if time has run out, run countdown timer and play sound
         else {
             clearInterval(intervalId);
-            countDown(1500);
+            stopPomodoro();
             audio.play();
             return;
         }
@@ -120,8 +144,8 @@ function startPomodoro() {
     button.addEventListener('click', stopPomodoro);
     clearInterval(intervalId);
     audio.pause();
-    document.getElementById('counter').style.background = "none";
-    countDown(15);
+    counterContent.style.background = "none";
+    countDown();
     button.innerHTML = 'RESTART';
 }
 
@@ -131,13 +155,28 @@ function stopPomodoro() {
     button.addEventListener('click', startPomodoro);
     clearInterval(intervalId);
     audio.pause();
-    document.getElementById('counter').style.background = "none";
-    counterDom.innerHTML = "25:00";
+    counterContent.style.background = "none";
+    reset();
     button.innerHTML = 'START';
 }
 
 
 
-document.getElementById('plus').addEventListener('click', function () {          
-    console.log("hey");
-        });
+var plus = document.getElementById('plus');
+
+plus.addEventListener('click', function (e) {
+    e.preventDefault();
+    timeLeft = timeLeft + 60;
+    counterDom.innerHTML = (convertMins(timeLeft - counter));
+
+});
+
+var minus = document.getElementById('minus');
+
+minus.addEventListener('click', function (e) {
+    e.preventDefault();
+    if (timeLeft > 60) {
+        timeLeft = timeLeft - 60;
+        counterDom.innerHTML = (convertMins(timeLeft - counter));
+    }
+});
