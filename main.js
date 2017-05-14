@@ -40,6 +40,9 @@ var counterDom = document.getElementById('time');
 var counterContent = document.getElementById('counter-content');
 var myP = document.getElementById("myP");
 
+var pink = "rgba(216, 0, 96, 1.0)";
+var white = "rgba(208, 208, 208, 1.0)";
+
 // conversion for minutes
 function convertMins(secs) {
 
@@ -60,9 +63,9 @@ function reset() {
     // timeLeft = seconds;
     counter = 0;
     counterContent.style.background = "none";
-    counterDom.innerHTML = (convertMins(timeLeft - counter));myP.style.color = "rgba(216, 0, 96, 1.0)";
-    minus.style.color = "rgba(208, 208, 208, 1.0)";
-    plus.style.color = "rgba(208, 208, 208, 1.0)";
+    counterDom.innerHTML = (convertMins(timeLeft - counter));myP.style.color = pink;
+    minus.style.color = white;
+    plus.style.color = white;
     myP.innerHTML = "Rest 5:00";
 }
 
@@ -73,9 +76,9 @@ function countDown() {
     counter = 0;
     counterContent.style.background = "none";
     counterDom.innerHTML = (convertMins(timeLeft - counter));
-    myP.style.color = "rgba(216, 0, 96, 1.0)";
-    minus.style.color = "rgba(208, 208, 208, 1.0)";
-    plus.style.color = "rgba(208, 208, 208, 1.0)";
+    myP.style.color = pink;
+    minus.style.color = white;
+    plus.style.color = white;
     myP.innerHTML = "Rest 5:00";
 
     count();
@@ -103,10 +106,10 @@ function rest() {
     // timeLeft set to 5mins with 300
     counter = 0;
     counterDom.innerHTML = (convertMins(timeLeftRest - counter));
-    counterContent.style.background = "rgba(216, 0, 96, 1.0)";
-    myP.style.color = "rgba(208, 208, 208, 1.0)";
-    minus.style.color = "rgba(216, 0, 96, 1.0)";
-    plus.style.color = "rgba(216, 0, 96, 1.0)";
+    counterContent.style.background = pink;
+    myP.style.color = white;
+    minus.style.color = pink;
+    plus.style.color = pink;
     myP.innerHTML = "REST";
 
     restCount();
