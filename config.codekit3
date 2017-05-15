@@ -25,6 +25,28 @@
 		"oF": 0,
 		"oS": 0
 		},
+	"\/images\/favicon.png": {
+		"ft": 32768,
+		"iS": 15711,
+		"oA": 0,
+		"oAP": "\/images\/favicon.png",
+		"oF": 0,
+		"oIPL": 1,
+		"opt": 1,
+		"oT": 1,
+		"q": 100
+		},
+	"\/images\/tomato.png": {
+		"ft": 32768,
+		"iS": 2656,
+		"oA": 0,
+		"oAP": "\/images\/tomato.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
 	"\/index.html": {
 		"ft": 8192,
 		"oA": 2,
