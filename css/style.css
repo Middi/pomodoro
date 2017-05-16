@@ -75,7 +75,7 @@ p {
 
 .btn {
   border: none;
-  margin-top: 50px;
+  margin: 50px 0;
   background: none;
   color: #d0d0d0;
   font-size: 2rem;
